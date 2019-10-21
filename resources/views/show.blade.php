@@ -7,18 +7,13 @@
     <title>Document</title>
 </head>
 <body>
-
-    @foreach($cars as $car)
-
        
-            <p>
-               Car ID: {{$car->id}} <br>
-               Car title: {{$car->title}} <br>
-               <a href="/cars/{{$car->id}}"> Link to the car<a><br><br>
-            </p>
-       
-
-    @endforeach
+    <p>
+        Car ID: {{$car->id}} <br>
+        Car title: {{$car->title}} <br>
+        Car producer: {{$car->producer}} <br>
+        Number of doors: {{$car->number_of_doors}} <br><br>                                  
+    </p> 
 
 </body>
 </html>

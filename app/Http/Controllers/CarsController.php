@@ -17,5 +17,13 @@ class CarsController extends Controller
     }
 
     
+    public function show(Request $request, $id) 
+    {
+        $car = Car::findOrFail($id);
+        
+        
+        return view('/show', compact('car'));
+    }
+
 }
 
