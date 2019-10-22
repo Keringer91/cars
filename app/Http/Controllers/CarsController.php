@@ -12,18 +12,14 @@ class CarsController extends Controller
     {
         $cars = \App\Car::all();
         
-        
-        return view('/cars', compact('cars'));
+        return view('cars/cars', compact('cars'));
     }
 
-    
     public function show(Request $request, $id) 
     {
         $car = Car::findOrFail($id);
         
-        
-        return view('/show', compact('car'));
+        return view('cars/show', compact('car'));
     }
 
 }
-

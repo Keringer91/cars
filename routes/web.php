@@ -11,22 +11,23 @@
 |
 */
 
-Route::get('/', function () {
-
+Route::get('/welcome', function () {
+   
     $name = 'Sabolc';
     $age = '27';
     
-
     return view('welcome',compact('name','age'));
 });
 
+Route::get('/', function () {
+
+    return view('layouts.master');
+})->name('layouts.master');
+
 Route::get('/about', function () {
     return view('about');
-});
+})->name('about');
 
+Route::get('/cars', 'CarsController@index')->name('cars.cars');
 
-Route::get('/cars', 'CarsController@index');
-
-Route::get('/cars/{id}', 'CarsController@show');
-
-
+Route::get('/cars/{id}', 'CarsController@show')->name('cars.show');
