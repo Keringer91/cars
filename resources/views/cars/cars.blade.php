@@ -14,7 +14,7 @@
                <a href="/cars/{{$car->id}}">Show<a><br><br>
             </p>
         </div>
-        
+
     @endforeach
 </div>
 

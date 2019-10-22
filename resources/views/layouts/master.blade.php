@@ -91,6 +91,10 @@
 
             .car-table {
                 width: 25%;
+                padding: 10px;
+                border-width: 1px;
+                border-style: solid;
+                border-color: #636b6f;
             }
 
             p {
